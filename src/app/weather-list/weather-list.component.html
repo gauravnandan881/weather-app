@@ -1,0 +1,10 @@
+<form>
+    <div class="form-group">
+        <label for="exampleInputCityname">City</label>
+        <input type="text" class="form-control" (input)="onUpdateCityName($event)" placeholder="Enter City Name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div *ngFor="let items of WEATHERITEMS">
+    <app-weather-item></app-weather-item>
+</div>
