@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WEATHERITEMS } from '../weather-data';
 import { WeatherItemComponent } from '../weather-item/weather-item.component';
 import { WeatherItem } from '../weather-item';
+import { WeatherService } from '../weather.service';
 @Component({
   selector: 'app-weather-list',
   templateUrl: './weather-list.component.html',
@@ -9,11 +10,11 @@ import { WeatherItem } from '../weather-item';
 })
 export class WeatherListComponent implements OnInit {
 
-  constructor() {}
-  weatherItems: WeatherItem[];
+  weatherItems: WeatherItem[]=[];
+  constructor(private _weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.weatherItems = WEATHERITEMS;
+    this.weatherItems = this._weatherService.getWeatherItems();
   }
   onUpdateCityName(event: Event){
   //   this.newcityname = (<HTMLInputElement>event.target).value;
