@@ -1,5 +1,9 @@
-<div *ngIf="this.WEATHERITEMS.length===0; else elseBlock">No items to display</div>
+<!-- <div *ngIf="this.WEATHERITEMS.length===0; else elseBlock">No items to display</div>
 <ng-template #elseBlock>
   <div *ngFor="let weatherItem of WEATHERITEMS; index as i">
-    <!-- <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"> -->
-          <app-weather-item [WeatherItem]="WeatherItem" [i]=i></app-weather-item>
+     <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)">
+          <app-weather-item [WeatherItem]="WeatherItem" [i]=i></app-weather-item> -->
+
+          <section class="weather-list">
+            <app-weather-item *ngFor="let weatherItem of weatherItems" [item]="weatherItem"></app-weather-item>
+        </section>
