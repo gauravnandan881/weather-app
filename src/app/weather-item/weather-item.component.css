@@ -1,0 +1,6 @@
+.col-2 {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  text-align: right;
+}

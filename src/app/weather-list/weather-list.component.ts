@@ -3,6 +3,7 @@ import { WEATHERITEMS } from '../weather-data';
 import { WeatherItemComponent } from '../weather-item/weather-item.component';
 import { WeatherItem } from '../weather-item';
 import { WeatherService } from '../weather.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-weather-list',
   templateUrl: './weather-list.component.html',
